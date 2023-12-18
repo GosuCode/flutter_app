@@ -1,4 +1,5 @@
 import 'package:app/home_page.dart';
+import 'package:app/id_card.dart';
 import 'package:app/row_column.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.amber,
       ),
-      home: const RowColumn(),
+      home: ID_Card(),
     );
   }
 }
