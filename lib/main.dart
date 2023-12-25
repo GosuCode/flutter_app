@@ -1,6 +1,4 @@
-import 'package:app/home_page.dart';
-import 'package:app/id_card.dart';
-import 'package:app/row_column.dart';
+import 'package:app/input_widgets.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.amber,
       ),
-      home: ID_Card(),
+      home: InputWidget(),
     );
   }
 }
