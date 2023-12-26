@@ -22,7 +22,7 @@ class _InputWidgetState extends State<InputWidget> {
 
   late SharedPreferences sharedPreferences;
   getInstance() async {
-    SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+    sharedPreferences = await SharedPreferences.getInstance();
   }
 
   @override
@@ -43,8 +43,8 @@ class _InputWidgetState extends State<InputWidget> {
               width: 300,
               child: TextFormField(
                 controller: userNameController,
-                keyboardType: TextInputType.phone,
-                obscureText: true,
+                keyboardType: TextInputType.name,
+                // obscureText: true,
                 // obscuringCharacter: "#",
                 decoration: InputDecoration(
                     labelText: "Username",
@@ -96,7 +96,9 @@ class _InputWidgetState extends State<InputWidget> {
                   value: Gender.OTHERS,
                   groupValue: selectedGender,
                   onChanged: (value) {
-                    selectedGender = value!;
+                    setState(() {
+                      selectedGender = value!;
+                    });
                   }),
             ],
           ),
