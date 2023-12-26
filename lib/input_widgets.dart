@@ -47,12 +47,12 @@ class _InputWidgetState extends State<InputWidget> {
                 // obscureText: true,
                 // obscuringCharacter: "#",
                 decoration: InputDecoration(
-                    labelText: "Username",
-                    labelStyle: TextStyle(color: Colors.red),
-                    hintText: "Enter your name",
-                    helperText: "Helper Text",
-                    suffix: Icon(Icons.person),
-                    prefix: Icon(Icons.help)),
+                  labelText: "Username",
+                  labelStyle: TextStyle(color: Colors.red),
+                  hintText: "Enter your name",
+                  helperText: "Helper Text",
+                  suffix: Icon(Icons.person),
+                ),
               ),
             ),
           ),
@@ -103,7 +103,7 @@ class _InputWidgetState extends State<InputWidget> {
             ],
           ),
           DropdownButton(
-              menuMaxHeight: 40,
+              menuMaxHeight: 400,
               value: selectedFruits,
               items: fruits
                   .map((e) => DropdownMenuItem(
@@ -135,6 +135,10 @@ class _InputWidgetState extends State<InputWidget> {
                 print(sharedPreferences.getString("userName"));
               },
               child: Text("show data")),
+          Text(userNameController.text),
+          Text(checkboxState.toString()),
+          Text(sliderValue.toStringAsFixed(2)),
+          Text(selectedFruits.toString()),
         ],
       ),
     );

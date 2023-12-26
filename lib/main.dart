@@ -1,4 +1,5 @@
 import 'package:app/input_widgets.dart';
+import 'package:app/use_packages.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.amber,
       ),
-      home: InputWidget(),
+      home: UsePackages(),
     );
   }
 }
